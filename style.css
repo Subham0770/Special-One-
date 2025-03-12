@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  
+  .birthday-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    height: 100vh;
+    width: 100vw;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    font-family:"Lilita One", sans-serif;   
+     animation: fadeInDownBig;
+
+    animation: pop 1s ease-in-out infinite alternate;
+
+    animation-duration: 1s;
+    
+  }
+  
+  @keyframes pop {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+  }
+  @keyframes fadeInDownBig {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+  }
+  
+  
+  .slideshow {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  #slideshow-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px white;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .message {
+    font-size: 18px;
+    margin-bottom: 20px;
+    /* animation: pop 2s ease-in-out infinite alternate; */
+    font-family: 'Cedarville Cursive', cursive;
+    color: rgb(48, 219, 245);
+    width: 65%;
+    margin-left:220px;
+    animation:rotateIn  ease-in-out;
+    animation-duration: 4s;
+
+  }
+  
+
+   
+  @keyframes fadeIn {
+    from { opacity: 0.7; }
+    to { opacity: 1; }
+  }
+  
+  button {
+    background-color: #ff4081;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.1s ease;
+  }
+  
+  button:hover {
+    background-color: #ff1e6a;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Corner Images */
+  .top-left-image, .top-right-image, .bottom-left-image, .bottom-right-image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    clip-path: circle(50%);
+    z-index: 0;
+    opacity: 0.7;
+  }
+  
+  .top-left-image { top: 10px; left: 10px; background-image: url('pyl2.jpg'); 
+    animation:fadeOutTopLeft infinite ease-in-out;
+    animation-duration: 7s;
+  }
+  .top-right-image { top: 10px; right: 10px; background-image: url('pyl3.jpg');
+    animation:fadeOutTopRight infinite ease-in-out;
+    animation-duration: 7s;
+  }
+  .bottom-left-image { bottom: 10px; left: 10px; background-image: url('pyl5.jpg');
+  
+    animation:fadeOutUp infinite ease-in-out;
+    animation-duration: 7s;}
+  .bottom-right-image { bottom: 10px; right: 10px; background-image: url('pyl14.jpg');
+  
+    animation:fadeOutUp  infinite ease-in-out;
+    animation-duration: 7s;}
+  
+  .side-left-image, .side-right-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 260px;
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+  }
+  
+  .side-left-image { left: 240px; background-image: url('pyl6.jpg');
+  
+  animation:fadeOutTopRight infinite ease-in-out;
+  animation-duration: 7s; }
+  .side-right-image { right: 200px; background-image: url('pyl16.jpg');
+ animation: fadeOutTopLeft infinite ease-in-out;
+  animation-duration: 7s; }
+    
+    
+  
+  
+  
+  
+  /* ❤️ Falling Heart Style */
+  .falling-heart {
+    position: fixed;
+    top: -50px;
+    color: #ff5e78;
+    font-size: 24px;
+    animation: fall 5s linear forwards;
+    pointer-events: none;
+    z-index: 9999;
+    user-select: none;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-50px) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  .coloumn img{
+    width:100%;
+    float:left;
+    margin-left:20px;
+
+
+
+  }
+  
